@@ -49,7 +49,7 @@ function(ocv_init_download_mirror)
       COMMAND
         ${GIT_EXECUTABLE} remote get-url origin
       WORKING_DIRECTORY
-        ${CMAKE_SOURCE_DIR}
+        ${OpenCV_SOURCE_DIR}
       RESULT_VARIABLE
         RESULT_STATUS
       OUTPUT_VARIABLE

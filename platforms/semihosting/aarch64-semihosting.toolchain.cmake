@@ -7,7 +7,7 @@ set(CMAKE_SYSTEM_PROCESSOR          AArch64)
 
 set(CMAKE_TRY_COMPILE_TARGET_TYPE   STATIC_LIBRARY)
 
-set(PORT_FILE ${CMAKE_SOURCE_DIR}/platforms/semihosting/include/aarch64_semihosting_port.hpp)
+set(PORT_FILE ${OpenCV_SOURCE_DIR}/platforms/semihosting/include/aarch64_semihosting_port.hpp)
 
 set(COMMON_FLAGS "--specs=rdimon.specs -DOPENCV_INCLUDE_PORT_FILE=\\\"${PORT_FILE}\\\"")
 

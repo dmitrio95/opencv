@@ -85,7 +85,7 @@ set_property(DIRECTORY APPEND PROPERTY COMPILE_DEFINITIONS ${carotene_defs})
 # we add dummy file to fix XCode build
 add_library(tegra_hal STATIC $<TARGET_OBJECTS:carotene_objs> "dummy.cpp")
 set_target_properties(tegra_hal PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${3P_LIBRARY_OUTPUT_PATH})
-set(OPENCV_SRC_DIR "${CMAKE_SOURCE_DIR}")
+set(OPENCV_SRC_DIR "${OpenCV_SOURCE_DIR}")
 if(NOT BUILD_SHARED_LIBS)
   ocv_install_target(tegra_hal EXPORT OpenCVModules ARCHIVE DESTINATION ${OPENCV_3P_LIB_INSTALL_PATH} COMPONENT dev)
 endif()

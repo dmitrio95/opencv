@@ -45,7 +45,7 @@ macro(ocv_pylint_add_target)
     else()
       get_filename_component(__path "${__pylint_TARGET}" DIRECTORY)
     endif()
-    while(__path MATCHES "^${CMAKE_SOURCE_DIR}")
+    while(__path MATCHES "^${OpenCV_SOURCE_DIR}")
       if(EXISTS "${__path}/pylintrc")
         set(__rcfile "${__path}/pylintrc")
         break()
@@ -99,8 +99,8 @@ function(ocv_pylint_finalize)
 
   add_custom_command(
       OUTPUT "${CMAKE_BINARY_DIR}/pylintrc"
-      COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/platforms/scripts/pylintrc" "${CMAKE_BINARY_DIR}/pylintrc"
-      DEPENDS "${CMAKE_SOURCE_DIR}/platforms/scripts/pylintrc"
+      COMMAND ${CMAKE_COMMAND} -E copy_if_different "${OpenCV_SOURCE_DIR}/platforms/scripts/pylintrc" "${CMAKE_BINARY_DIR}/pylintrc"
+      DEPENDS "${OpenCV_SOURCE_DIR}/platforms/scripts/pylintrc"
   )
 
   set(PYLINT_CONFIG_SCRIPT "")

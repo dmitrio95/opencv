@@ -147,7 +147,7 @@ if(DOXYGEN_FOUND)
   set(tutorial_py_path "${CMAKE_CURRENT_SOURCE_DIR}/py_tutorials")
   set(CMAKE_DOXYGEN_TUTORIAL_JS_ROOT "- @ref tutorial_js_root")
   set(tutorial_js_path "${CMAKE_CURRENT_SOURCE_DIR}/js_tutorials")
-  set(example_path "${CMAKE_SOURCE_DIR}/samples")
+  set(example_path "${OpenCV_SOURCE_DIR}/samples")
 
   set(doxygen_image_path
       ${CMAKE_CURRENT_SOURCE_DIR}/images
